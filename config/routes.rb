@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :posts
+
+  resources :posts do
+    resources :comments
+  end
+  
   get 'say/hello'
 
   get 'say/goodbye'
